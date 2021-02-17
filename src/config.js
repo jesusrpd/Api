@@ -5,5 +5,6 @@ config();
 
 export default{
     PORT: process.env.PORT || 4000,
-    URI: `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.rkcwz.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`
+    URI: `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.rkcwz.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`,
+    SECRET: 'jrps_secret_redox_shop_type_4539028'
 };
