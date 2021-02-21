@@ -19,7 +19,7 @@ export const register = async (req, res)=>{
     const token = jwt.sign({id: newUser._id}, config.SECRET, {
         expiresIn: 86400 //24 horas
     });
-    res.status(200).json({token});
+    res.status(200).json({token, auth: true});
 };
 
 export const login = async (req, res)=>{
@@ -37,5 +37,5 @@ export const login = async (req, res)=>{
         expiresIn: 86400 //24 horas
     });
 
-    res.status(200).json(token);
+    res.status(200).json({token, auth: true});
 };
